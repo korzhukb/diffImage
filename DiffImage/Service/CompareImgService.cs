@@ -118,7 +118,7 @@ namespace DiffImage.Service
         /// <param name="length">The length.</param>
         /// <param name="maxLength">The maximum length.</param>
         /// <returns></returns>
-        private static int CalculationMaxValue(int minPoint, int length, int maxLength)
+        public static int CalculationMaxValue(int minPoint, int length, int maxLength)
         {
             int result = 0;
 
