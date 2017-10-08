@@ -1,0 +1,30 @@
+﻿table.tblMain {
+    margin: 1% 0 0 1%;
+    padding: 1px;
+}
+
+    table.tblMain td {
+        padding: 1px;
+    }
+
+    table.tblMain tr:last-child td {
+        border: none;
+    }
+
+.spanError {
+    color: red;
+    margin-left: 1%;
+    font-size: medium;
+}
+
+.spanSuccess {
+    color: green;
+    font-size: medium;
+}
+
+.resultImage {
+    width: 50%;
+    height: 50%;
+    border: 1px solid black;
+    margin: 1% 0 0 1%;
+}

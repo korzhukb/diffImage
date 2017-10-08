@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+<link href="~/Content/MyStyleSheet.css" rel="stylesheet" />
+<div class="row">
+    <div style="margin: 0 0 0 1%">
+        <h1>Test</h1>
+        <h4>Different image</h4>
+    </div>
+    @using (Html.BeginForm("btnShowDiff", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <span class="spanError"><b>@ViewBag.Error</b></span>
+        <span class="spanSuccess"><b>@ViewBag.Success</b></span>
+        <table class="tblMain">
+            <tr>
+                <td>Image 1</td>
+                <td>
+                    <input name="File1" type="file" />
+                </td>
+            </tr>
+            <tr>
+                <td>Image 2</td>
+                <td>
+                    <input name="File2" type="file" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Different" />
+                </td>
+            </tr>
+        </table>
+        if (!string.IsNullOrEmpty(ViewBag.ImgSrc))
+        {
+            <img id="imgView" class="resultImage" src="@ViewBag.ImgSrc" />
+        }
+    }
+</div>
